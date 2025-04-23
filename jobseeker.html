@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baroque Amoka Careers - Empowering Job Seekers in Namibia. Discover opportunities, enhance your skills, and achieve your career goals.">
+    <title>For Job Seekers - Baroque Amoka Careers</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        @media (max-width: 768px) {
+            .hero-section h2 {
+                font-size: 1.8rem;
+            }
+            .job-search-form input, .job-search-form button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .cta-button {
+                font-size: 1rem;
+            }
+        }
+
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Buttons */
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #003d80;
+        }
+
+        .cta-button.secondary {
+            background-color: #f4f4f4;
+            color: #0056b3;
+            border: 1px solid #0056b3;
+        }
+
+        .cta-button.secondary:hover {
+            background-color: #e6e6e6;
+        }
+
+        /* Navigation */
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .main-nav ul li {
+            display: inline;
+        }
+
+        .main-nav ul li a {
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        .main-nav ul li a.active {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .site-footer a {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <img src="assets/images/logo.png" alt="Baroque Amoka Careers Logo" loading="lazy" class="logo">
+            <h1>Baroque Amoka Careers</h1>
+            <p>Your Gateway to Career Opportunities in Namibia.</p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" aria-label="Home">Home</a></li>
+                    <li><a href="employer.html" aria-label="Employer">For Employers</a></li>
+                    <li><a href="jobseeker.html" aria-label="Job Seeker" class="active">For Job Seekers</a></li>
+                    <li><a href="resources.html" aria-label="Resources">Career Resources</a></li>
+                    <li><a href="contact.html" aria-label="Contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h2>Find Your Dream Job</h2>
+                <p>Unlock your potential with thousands of job opportunities tailored to your skills and aspirations.</p>
+                <form action="search_results.html" method="get" class="job-search-form">
+                    <input type="text" name="keywords" placeholder="Job title, skills, or company" aria-label="Search by keywords">
+                    <input type="text" name="location" placeholder="City or region" aria-label="Search by location">
+                    <button type="submit" class="cta-button">Search Jobs</button>
+                </form>
+            </div>
+        </section>
+        
+        <section class="jobseeker-services">
+            <div class="container">
+                <h2>Empowering Job Seekers</h2>
+                <p>At Baroque Amoka Careers, we are committed to helping you succeed. Our services are designed to guide you every step of the way.</p>
+                <ul>
+                    <li><strong>Personalized Job Recommendations:</strong> Receive job alerts that match your skills and preferences.</li>
+                    <li><strong>Resume Writing Assistance:</strong> Craft a professional resume that stands out to employers.</li>
+                    <li><strong>Interview Preparation:</strong> Access expert tips and resources to ace your interviews.</li>
+                    <li><strong>Career Development Resources:</strong> Explore tools and articles to enhance your skills and knowledge.</li>
+                </ul>
+                <a href="resources.html" class="cta-button secondary">Explore Career Resources</a>
+            </div>
+        </section>
+        
+        <section class="success-stories">
+            <div class="container">
+                <h2>Success Stories</h2>
+                <p>Hear from job seekers who found their dream jobs with Baroque Amoka Careers:</p>
+                <blockquote>
+                    <p>"Baroque Amoka Careers helped me land my first job in the tech industry. Their resources and support were invaluable!"</p>
+                    <cite>- Maria K., Software Developer</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"The personalized job alerts saved me so much time. I found a position that perfectly matched my skills!"</p>
+                    <cite>- John D., Marketing Specialist</cite>
+                </blockquote>
+                <a href="testimonials.html" class="cta-button secondary">Read More Stories</a>
+            </div>
+        </section>
+
+        <section class="featured-jobs">
+            <div class="container">
+                <h2>Featured Job Opportunities</h2>
+                <ul>
+                    <li>
+                        <h3>Software Developer</h3>
+                        <p>Company: Tech Innovators | Location: Windhoek</p>
+                        <a href="job_details.html" class="cta-button small">View Details</a>
+                    </li>
+                    <li>
+                        <h3>Marketing Specialist</h3>
+                        <p>Company: Creative Minds | Location: Swakopmund</p>
+                        <a href="job_details.html" class="cta-button small">View Details</a>
+                    </li>
+                    <li>
+                        <h3>Project Manager</h3>
+                        <p>Company: Build Namibia | Location: Walvis Bay</p>
+                        <a href="job_details.html" class="cta-button small">View Details</a>
+                    </li>
+                </ul>
+                <a href="search_results.html" class="cta-button secondary">Browse All Jobs</a>
+            </div>
+        </section>
+
+        <section class="create-account">
+            <div class="container">
+                <h2>Get Started Today</h2>
+                <p>Create a free account to save your favorite jobs, receive personalized alerts, and apply faster. Take control of your career journey with just a few clicks.</p>
+                <a href="signup.html" class="cta-button">Create Account</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Baroque Amoka Careers. All rights reserved.</p>
+            <p>
+                <a href="contact.html" aria-label="Contact Us">Contact Us</a> | 
+                <a href="privacy.html" aria-label="Privacy Policy">Privacy Policy</a> | 
+                <a href="terms.html" aria-label="Terms of Service">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

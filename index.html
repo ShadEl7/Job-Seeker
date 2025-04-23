@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baroque Amoka Careers - Find job opportunities in Namibia. Search thousands of job listings and connect with top employers.">
+    <title>Home - Baroque Amoka Careers</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <img src="assets/images/logo.png" alt="Baroque Amoka Careers Logo" loading="lazy" class="logo">
+            <h1>Welcome to Baroque Amoka Careers</h1>
+            <p>Your trusted partner in finding the perfect job or candidate in Namibia.</p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" aria-label="Home">Home</a></li>
+                    <li><a href="employer.html" aria-label="Employer">For Employers</a></li>
+                    <li><a href="jobseeker.html" aria-label="Job Seeker">For Job Seekers</a></li>
+                    <li><a href="resources.html" aria-label="Resources">Career Resources</a></li>
+                    <li><a href="contact.html" aria-label="Contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h2>Find Your Next Opportunity</h2>
+                <p>Search thousands of job listings and connect with top employers in Namibia.</p>
+                <form action="search_results.html" method="GET" class="search-form">
+                    <input type="text" name="job_title" placeholder="Job Title or Keyword" aria-label="Job Title or Keyword" required>
+                    <input type="text" name="location" placeholder="City or Region" aria-label="City or Region">
+                    <select name="job_type" aria-label="Job Type">
+                        <option value="">Job Type</option>
+                        <option value="full-time">Full-Time</option>
+                        <option value="part-time">Part-Time</option>
+                        <option value="remote">Remote</option>
+                        <option value="contract">Contract</option>
+                    </select>
+                    <button type="submit" aria-label="Search Jobs">Search Jobs</button>
+                </form>
+            </div>
+        </section>
+        
+        <section class="featured-jobs">
+            <div class="container">
+                <h2>Featured Opportunities</h2>
+                <ul class="job-list">
+                    <li class="job-card">
+                        <h3>Senior Software Engineer</h3>
+                        <p>Location: Windhoek | Type: Full-Time</p>
+                        <button onclick="location.href='job_details.html'" aria-label="Learn more about Senior Software Engineer">Learn More</button>
+                    </li>
+                    <li class="job-card">
+                        <h3>Graphic Designer</h3>
+                        <p>Location: Swakopmund | Type: Contract</p>
+                        <button onclick="location.href='job_details.html'" aria-label="Learn more about Graphic Designer">Learn More</button>
+                    </li>
+                    <li class="job-card">
+                        <h3>Remote Customer Support Specialist</h3>
+                        <p>Location: Remote | Type: Remote</p>
+                        <button onclick="location.href='job_details.html'" aria-label="Learn more about Remote Customer Support Specialist">Learn More</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="career-resources">
+            <div class="container">
+                <h2>Career Resources</h2>
+                <p>Explore tips, guides, and tools to help you succeed in your job search and career growth.</p>
+                <ul class="resource-list">
+                    <li><a href="resume_tips.html" aria-label="Resume Writing Tips">Resume Writing Tips</a></li>
+                    <li><a href="interview_preparation.html" aria-label="Interview Preparation">Interview Preparation</a></li>
+                    <li><a href="career_growth.html" aria-label="Career Growth Strategies">Career Growth Strategies</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="subscribe">
+            <div class="container">
+                <h2>Stay Ahead with Job Alerts</h2>
+                <p>Sign up to receive personalized job recommendations directly to your inbox.</p>
+                <form action="subscribe.php" method="POST" class="subscribe-form">
+                    <input type="email" name="email" placeholder="Enter your email" aria-label="Enter your email" required>
+                    <button type="submit" aria-label="Subscribe to job alerts">Subscribe Now</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Why Choose Us?</h2>
+                <p>We connect job seekers with top employers and provide tools to help you succeed.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Baroque Amoka Careers. All rights reserved.</p>
+            <p>
+                <a href="contact.html" aria-label="Contact Us">Contact Us</a> | 
+                <a href="privacy.html" aria-label="Privacy Policy">Privacy Policy</a> | 
+                <a href="terms.html" aria-label="Terms of Service">Terms of Service</a>
+            </p>
+            <p>
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page">Facebook</a> | 
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page">Twitter</a> | 
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="Visit our LinkedIn page">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to Top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Browse All Jobs - Baroque Amoka Careers</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore exciting career opportunities with Baroque Amoka. Find your dream job today!">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+    <style>
+        /* Add some basic styling for better visuals */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header, footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav {
+            background-color: #003366;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #004080;
+            color: #f9f9f9;
+        }
+        nav a.active {
+            background-color: #002244;
+            color: #f9f9f9;
+        }
+        main {
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #004080;
+        }
+        button {
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #003366;
+        }
+        input, select {
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 1.5rem;
+        }
+        ul li a {
+            color: #004080;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 1rem;">
+            <img src="assets/images/logo.png" alt="Baroque Amoka Careers Logo" style="height: 50px;">
+            <div>
+                <h1 style="margin: 0; color: white;">Baroque Amoka Careers</h1>
+                <p style="margin: 0; color: white;">Your next career move starts here. Explore our latest job openings and apply today!</p>
+            </div>
+        </div>
+    </header>
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html" aria-label="Home">Home</a></li>
+            <li><a href="employer.html" aria-label="For Employers">For Employers</a></li>
+            <li><a href="jobseeker.html" aria-label="For Job Seekers" class="active">For Job Seekers</a></li>
+            <li><a href="resources.html" aria-label="Career Resources">Career Resources</a></li>
+            <li><a href="contact.html" aria-label="Contact Us">Contact Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Search and Filter Jobs</h2>
+            <form action="search_results.html" method="GET">
+                <input type="text" name="query" placeholder="Search by job title or keyword" aria-label="Search jobs">
+                <label for="location">Location:</label>
+                <select id="location" name="location">
+                    <option value="all">All Locations</option>
+                    <option value="windhoek">Windhoek</option>
+                    <option value="swakopmund">Swakopmund</option>
+                    <option value="walvis-bay">Walvis Bay</option>
+                    <option value="oshakati">Oshakati</option>
+                    <option value="keetmanshoop">Keetmanshoop</option>
+                </select>
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="all">All Categories</option>
+                    <option value="it">IT</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="management">Management</option>
+                    <option value="finance">Finance</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="education">Education</option>
+                </select>
+                <button type="submit">Apply Filters</button>
+            </form>
+        </section>
+        <section>
+            <h2>Available Opportunities</h2>
+            <ul>
+                <li>
+                    <h3>Software Developer - Windhoek</h3>
+                    <p>Join our dynamic IT team to design, develop, and maintain cutting-edge software solutions. Ideal candidates have experience in JavaScript, Python, or Java.</p>
+                    <p><strong>Type:</strong> Full-Time | <strong>Salary:</strong> N$40,000 - N$60,000/month | <strong>Deadline:</strong> May 15, 2025</p>
+                    <a href="job_details.html?job=software-developer-windhoek" aria-label="View details for Software Developer position in Windhoek">View Details</a>
+                </li>
+                <li>
+                    <h3>Marketing Specialist - Swakopmund</h3>
+                    <p>We are looking for a creative marketing professional to lead campaigns, manage social media, and drive brand awareness. Experience in digital marketing is a plus.</p>
+                    <p><strong>Type:</strong> Full-Time | <strong>Salary:</strong> N$30,000 - N$50,000/month | <strong>Deadline:</strong> May 20, 2025</p>
+                    <a href="job_details.html?job=marketing-specialist-swakopmund" aria-label="View details for Marketing Specialist position in Swakopmund">View Details</a>
+                </li>
+                <li>
+                    <h3>Project Manager - Walvis Bay</h3>
+                    <p>Lead and manage projects from inception to completion. Strong organizational and leadership skills are required. PMP certification is an advantage.</p>
+                    <p><strong>Type:</strong> Contract | <strong>Salary:</strong> N$50,000 - N$70,000/month | <strong>Deadline:</strong> May 25, 2025</p>
+                    <a href="job_details.html?job=project-manager-walvis-bay" aria-label="View details for Project Manager position in Walvis Bay">View Details</a>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Why Work With Us?</h2>
+            <p>At Baroque Amoka, we value innovation, collaboration, and professional growth. Our team is committed to creating a supportive and inclusive workplace where everyone can thrive.</p>
+        </section>
+        <section>
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter to receive the latest job openings directly in your inbox.</p>
+            <form action="subscribe.html" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Baroque Amoka Careers. All rights reserved.</p>
+        <p>Follow us: 
+            <a href="https://facebook.com/baroqueamoka" target="_blank">Facebook</a> | 
+            <a href="https://twitter.com/baroqueamoka" target="_blank">Twitter</a> | 
+            <a href="https://linkedin.com/company/baroqueamoka" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>

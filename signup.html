@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create an account to explore career opportunities with Baroque Amoka Careers.">
+    <title>Create Account - Baroque Amoka Careers</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo" aria-label="Baroque Amoka Careers Home">Baroque Amoka Careers</a>
+            <ul class="nav-links">
+                <li><a href="index.html" aria-label="Home" aria-current="page">Home</a></li>
+                <li><a href="employer.html" aria-label="For Employers">For Employers</a></li>
+                <li><a href="jobseeker.html" aria-label="For Job Seekers" class="active">For Job Seekers</a></li>
+                <li><a href="resources.html" aria-label="Career Resources">Career Resources</a></li>
+                <li><a href="contact.html" aria-label="Contact Us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="form-section">
+            <h1>Create Your Account</h1>
+            <p>Join us and take the first step toward your dream career.</p>
+            <form action="submit_signup.html" method="post" class="signup-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" aria-label="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" aria-label="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Create a strong password" aria-label="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" aria-label="Confirm Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" aria-label="Phone Number">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>.</label>
+                </div>
+                <div class="form-group">
+                    <!-- Example of Google reCAPTCHA -->
+                    <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+                </div>
+                <div id="error-message" class="error-message" style="display:none;" aria-live="polite">
+                    Please fix the errors above.
+                </div>
+                <button type="submit" class="cta-button" id="submit-button">Sign Up</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Baroque Amoka Careers. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Apply for Job - Baroque Amoka Careers</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #eef4fb, #dce6f2); /* Subtle gradient */
+            color: #333333; /* Dark gray for text */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #0056b3; /* Deep blue */
+            color: #ffffff; /* White text */
+        }
+
+        .logo img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #f4c542; /* Gold for links */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff; /* White on hover */
+        }
+
+        .application-form {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: #ffffff; /* White background */
+            border: 1px solid #d1d9e6; /* Light blue-gray border */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #0056b3; /* Deep blue for labels */
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            border-color: #0056b3; /* Highlight on focus */
+            outline: none;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #f4c542; /* Gold for buttons */
+            color: #0056b3; /* Deep blue text */
+            text-align: center;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e0b93a; /* Darker gold on hover */
+        }
+
+        .success-message {
+            text-align: center;
+            color: #28a745; /* Green for success message */
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #0056b3; /* Deep blue */
+            color: #ffffff; /* White text */
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #f4c542; /* Gold for footer links */
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Baroque Amoka Careers Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-label="Home">Home</a></li>
+                <li><a href="employer.html" aria-label="Employer">For Employers</a></li>
+                <li><a href="jobseeker.html" aria-label="Job Seeker">For Job Seekers</a></li>
+                <li><a href="resources.html" aria-label="Resources">Career Resources</a></li>
+                <li><a href="contact.html" aria-label="Contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <h1>Apply for Job</h1>
+    </header>
+    <main>
+        <section>
+            <h2 id="job-title">Job Title</h2>
+            <form class="application-form" action="submit_application.html" method="POST" onsubmit="return validateForm()">
+                <label for="name" class="form-label">Full Name:</label>
+                <input type="text" id="name" name="name" class="form-input" aria-label="Full Name" required>
+                
+                <label for="email" class="form-label">Email Address:</label>
+                <input type="email" id="email" name="email" class="form-input" aria-label="Email Address" required>
+                
+                <label for="phone" class="form-label">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" class="form-input" aria-label="Phone Number" pattern="[0-9]{10}" placeholder="1234567890" required>
+                
+                <label for="location" class="form-label">Job Location:</label>
+                <input type="text" id="location" name="location" class="form-input" aria-label="Job Location" required>
+                
+                <label for="resume" class="form-label">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" class="form-input" aria-label="Upload Resume" accept=".pdf,.doc,.docx" required>
+                
+                <label for="cover-letter" class="form-label">Cover Letter:</label>
+                <textarea id="cover-letter" name="cover-letter" class="form-input" aria-label="Cover Letter" rows="5" placeholder="Write your cover letter here..." required></textarea>
+                
+                <input type="hidden" id="job" name="job">
+                
+                <button type="submit" class="cta-button">Submit Application</button>
+            </form>
+            <div id="success-message" class="success-message" style="display: none;">
+                Your application has been submitted successfully!
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Baroque Amoka Careers. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const jobTitle = urlParams.get('job');
+
+        if (jobTitle) {
+            document.getElementById('job-title').textContent = `Apply for ${jobTitle.replace(/-/g, ' ')}`;
+            document.getElementById('job').value = jobTitle;
+        }
+
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const location = document.getElementById('location').value.trim();
+            const resume = document.getElementById('resume').value.trim();
+            const coverLetter = document.getElementById('cover-letter').value.trim();
+
+            if (!name || !email || !phone || !location || !resume || !coverLetter) {
+                alert('Please fill out all fields.');
+                return false;
+            }
+
+            document.getElementById('success-message').style.display = 'block';
+            return true;
+        }
+    </script>
+</body>
+</html>
